@@ -135,7 +135,8 @@ class Board:
                 old_tile = self.tiles[i][j]
                 new_tile = b.tiles[i][j]
                 new_tile.number = old_tile.number
+                new_tile.possibilities = list()
                 for k in range(len(old_tile.possibilities)):
                     new_tile.possibilities.append(old_tile.possibilities[k])
-        
+
         return b
