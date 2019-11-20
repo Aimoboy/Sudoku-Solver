@@ -43,7 +43,7 @@ class Board:
             string = ""
             for i in range(self.group_rows):
                 string += "++"
-                for j in range(self.group_cols * (2 + longest_number) + self.group_rows - 1):
+                for j in range(self.group_cols * (2 + longest_number) + self.group_cols - 1):
                     string += "-"
             string += "++\n"
             string *= 2
@@ -52,7 +52,7 @@ class Board:
         def row_separator():
             string = ""
             for i in range(self.group_rows):
-                for j in range(self.group_cols * (2 + longest_number) + self.group_rows - 1 + 2):
+                for j in range(self.group_cols * (2 + longest_number) + self.group_cols - 1 + 2):
                     string += "-"
             string += "--\n"
             return string
